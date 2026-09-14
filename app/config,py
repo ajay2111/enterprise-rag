@@ -1,0 +1,15 @@
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+class Settings:
+    DATABASE_URL: str | None = os.getenv("DATABASE_URL")
+    REDIS_URL: str | None = os.getenv("REDIS_URL")
+    RABBITMQ_URL: str | None = os.getenv("RABBITMQ_URL")
+    VECTOR_DB_URL: str | None = os.getenv("VECTOR_DB_URL")
+
+
+settings = Settings()

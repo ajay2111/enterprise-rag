@@ -1,0 +1,22 @@
+services:
+
+  api:
+    build: .
+    container_name: underwriting_api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7
+    container_name: underwriting_redis
+    ports:
+      - "6379:6379"
+
+  worker:
+    build: .
+    container_name: underwriting_worker
+    command: celery -A app.celery.celery_app worker --loglevel=info
+    depends_on:
+      - redis 

@@ -1,0 +1,6 @@
+age,income,occupation,policy_amount,previous_claims,credit_score,medical_score,smoker,risk
+28,850000,Software Engineer,5000000,0,780,95,No,Low
+45,1200000,Business Owner,10000000,1,640,70,Yes,Medium
+62,600000,Retired,250000,3,590,45,No,High
+34,1500000,Corporate Manager,15000000,0,810,98,No,Low
+51,450000,Driver,2000000,2,520,35,Yes,High
